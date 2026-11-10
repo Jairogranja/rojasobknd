@@ -5,12 +5,13 @@ const router = Router();
 router.get('/health', (req, res) => {
   res.json({
     status: 'OK',
-    message: 'rojasobknd API is running',
-    timestamp: new Date().toISOString()
+    message: 'Rojaso Gold API is running 🏆',
+    timestamp: new Date().toISOString(),
   });
 });
 
-// Add more route files here
-// router.use('/users', require('./user.routes'));
+// Rutas de recursos
+router.use('/leads', require('./lead.routes'));
+router.use('/testimonials', require('./testimonial.routes'));
 
 module.exports = router;
