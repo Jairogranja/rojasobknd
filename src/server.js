@@ -4,9 +4,9 @@ const connectDB = require('./config/db');
 
 const PORT = process.env.PORT || 3000;
 
-// Conectar a MongoDB y luego iniciar el servidor
-const startServer = async () => {
-  await connectDB();
+// Iniciar servidor inmediatamente y conectar DB en segundo plano
+const startServer = () => {
+  connectDB();
 
   app.listen(PORT, () => {
     console.log(`✅ Server running on http://localhost:${PORT}`);

@@ -13,5 +13,6 @@ router.get('/health', (req, res) => {
 // Rutas de recursos
 router.use('/leads', require('./lead.routes'));
 router.use('/testimonials', require('./testimonial.routes'));
+router.use('/gold-price', require('./gold.routes'));
 
 module.exports = router;
